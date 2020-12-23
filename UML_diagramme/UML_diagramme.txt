@@ -1,0 +1,100 @@
+@startuml
+class Resource {
++ name
++ type
++ status
++ count
++ __init__()
+}
+
+class Material {
++ ID
++ hardness
++ blastproof
++ breaking()
++ check()
++ __init__()
++ __repl__()
+}
+
+class Concrete {
++ name
++ ID
++ hardness
++ blastproof
++ __init__()
+}
+
+class Bricks {
++ name
++ ID
++ hardness
++ blastproof
++ __init__()
+}
+
+class Iron {
++ name
++ ID
++ hardness
++ blastproof
++__init__()
+}
+
+class Stone {
++ name
++ ID
++ hardness
++ blastproof
++ __init__()
+} 
+
+class Material extends Resource
+class Concrete extends Material
+class Bricks extends Material
+class Iron extends Material
+class Stone extends Material
+
+class Tool {
++ power
++ durability
++ __init__()
++ __repr__()
+}
+
+class WoodenPickaxe {
++ name
++ power
++ durability
++ __init__()
+}
+
+class IronPickaxe {
++ name
++ power
++ durability
++ __init__()
+}
+
+class Tool extends Resource
+class WoodenPickaxe extends Tool
+class IronPickaxe extends Tool
+
+class Entity {
++ name
++ standard power
++ equipment
++ equip()
++ __init__()
++ __repr__()
+}
+
+class Player {
++ name
++ standard power
++ __init__()
++ __repr__()
+}
+
+class Player extends Entity
+@enduml
